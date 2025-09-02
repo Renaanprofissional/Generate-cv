@@ -148,7 +148,7 @@ const FormCv: React.FC<Props> = ({ onSubmit }) => {
         </Button>
       </div>
 
-      {/* Quinta camada */}
+      {/* sexta camada */}
       <div className="mt-5">
         <h3 className="font-semibold mb-2">Habilidades:</h3>
         {form.habilidades.map((hab, i) => (
@@ -172,7 +172,7 @@ const FormCv: React.FC<Props> = ({ onSubmit }) => {
         </Button>
       </div>
 
-      {/* Sexta camada */}
+      {/* decima camada */}
       <div className="mt-5">
         <h3 className="font-semibold mb-2">Projetos:</h3>
         {form.projetos.map((pro, i) => (
@@ -197,7 +197,7 @@ const FormCv: React.FC<Props> = ({ onSubmit }) => {
         </Button>
       </div>
 
-      {/* decima camada */}
+      {/* decima primeira camada */}
       <div className="mt-5">
         <h3 className="font-semibold mb-2">Soft Skills:</h3>
         {form.softskills.map((hab, i) => (
