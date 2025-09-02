@@ -9,7 +9,7 @@ const Header = () => {
           <span className="text-blue-300">Dev</span>Curriculo
         </h2>
       </div>
-      <div className="mr-5">
+      <div className="mr-8">
         <h1 className="text-[#d78b30] font-bold cursor-pointer">Crie seu currículo</h1>
       </div>
     </header>

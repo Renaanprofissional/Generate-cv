@@ -140,8 +140,9 @@ const FormCv: React.FC<Props> = ({ onSubmit }) => {
           Exemplo: Graduação/Técnico (se tiver), Curso de Desenvolvimento
         </p>
         <Button
-          className="w-full"
+          className="w-[180px]"
           type="button"
+          variant="secondary"
           onClick={() => addField("formacoes")}
         >
           + Adicionar objetivos
@@ -164,8 +165,9 @@ const FormCv: React.FC<Props> = ({ onSubmit }) => {
           Exemplo: JavaScript, React, Node.js, Python, SQL
         </p>
         <Button
-          className="w-full"
+          className="w-[180px]"
           type="button"
+          variant="secondary"
           onClick={() => addField("habilidades")}
         >
           + Adicionar objetivos
@@ -189,8 +191,9 @@ const FormCv: React.FC<Props> = ({ onSubmit }) => {
           (Frontend)
         </p>
         <Button
-          className="w-full"
+          className="w-[180px]"
           type="button"
+          variant="secondary"
           onClick={() => addField("projetos")}
         >
           + Adicionar objetivos
@@ -213,8 +216,9 @@ const FormCv: React.FC<Props> = ({ onSubmit }) => {
           Exemplo: JavaScript, React, Node.js, Python, SQL
         </p>
         <Button
-          className="w-full"
+          className="w-[180px] mb-5"
           type="button"
+          variant="secondary"
           onClick={() => addField("softskills")}
         >
           + Adicionar objetivos
