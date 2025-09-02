@@ -9,13 +9,13 @@ interface Props {
 
 const ResultCv: React.FC<Props> = ({ data }) => {
   // Helper para evitar repetição
-  const notEmpty = (s: string) => s.trim() !== "";
+  const notEmpty = (s: string): boolean => s.trim() !== "";
 
   // Pré-filtrar os arrays
-  const formacoes = data.formacoes?.filter(notEmpty) ?? [];
-  const habilidades = data.habilidades?.filter(notEmpty) ?? [];
-  const projetos = data.projetos?.filter(notEmpty) ?? [];
-  const softskills = data.softskills?.filter(notEmpty) ?? [];
+  const formacoes: string[] = data.formacoes?.filter(notEmpty) ?? [];
+  const habilidades: string[] = data.habilidades?.filter(notEmpty) ?? [];
+  const projetos: string[] = data.projetos?.filter(notEmpty) ?? [];
+  const softskills: string[] = data.softskills?.filter(notEmpty) ?? [];
 
   return (
     <div className="space-y-4">
