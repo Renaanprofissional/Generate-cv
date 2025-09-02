@@ -7,7 +7,7 @@ interface Props {
   data: CurriculoData;
 }
 
-const CurriculoTemplate: React.FC<Props> = ({ data }) => {
+const ResultCv: React.FC<Props> = ({ data }) => {
   // Helper para evitar repetição
   const notEmpty = (s: string) => s.trim() !== "";
 
@@ -51,7 +51,7 @@ const CurriculoTemplate: React.FC<Props> = ({ data }) => {
         <div>
           <h3 className="font-semibold">🎓 Formação:</h3>
           <ul className="list-disc list-inside">
-            {formacoes.map((exp, i) => (
+            {formacoes.map((exp: string, i: number) => (
               <li key={i}>{exp}</li>
             ))}
           </ul>
@@ -63,7 +63,7 @@ const CurriculoTemplate: React.FC<Props> = ({ data }) => {
         <div>
           <h3 className="font-semibold">🛠️ Habilidades Técnicas</h3>
           <ul className="list-disc list-inside">
-            {habilidades.map((hab, i) => (
+            {habilidades.map((hab: string, i: number) => (
               <li key={i}>{hab}</li>
             ))}
           </ul>
@@ -75,7 +75,7 @@ const CurriculoTemplate: React.FC<Props> = ({ data }) => {
         <div>
           <h3 className="font-semibold">📂 Projetos</h3>
           <ul className="list-disc list-inside">
-            {projetos.map((proj, i) => (
+            {projetos.map((proj: string, i: number) => (
               <li key={i}>{proj}</li>
             ))}
           </ul>
@@ -87,7 +87,7 @@ const CurriculoTemplate: React.FC<Props> = ({ data }) => {
         <div>
           <h3 className="font-semibold">🌟 Soft Skills</h3>
           <ul className="list-disc list-inside">
-            {softskills.map((skill, i) => (
+            {softskills.map((skill: string, i: number) => (
               <li key={i}>{skill}</li>
             ))}
           </ul>
@@ -102,4 +102,4 @@ const CurriculoTemplate: React.FC<Props> = ({ data }) => {
   );
 };
 
-export default CurriculoTemplate;
+export default ResultCv;
