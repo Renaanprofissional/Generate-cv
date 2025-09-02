@@ -7,7 +7,7 @@ interface Props {
   data: CurriculoData;
 }
 
-const ResultCv: React.FC<Props> = ({ data }) => {
+const Resultcv: React.FC<Props> = ({ data }) => {
   // Helper para evitar repetição
   const notEmpty = (s: string): boolean => s.trim() !== "";
 
@@ -102,4 +102,4 @@ const ResultCv: React.FC<Props> = ({ data }) => {
   );
 };
 
-export default ResultCv;
+export default Resultcv;

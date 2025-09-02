@@ -23,7 +23,7 @@ interface Props {
   onSubmit: (data: CurriculoData) => void;
 }
 
-const FormCv: React.FC<Props> = ({ onSubmit }) => {
+const Formcv: React.FC<Props> = ({ onSubmit }) => {
   const [form, setForm] = useState<CurriculoData>({
     nome: "",
     cidade: "",
@@ -202,4 +202,4 @@ const FormCv: React.FC<Props> = ({ onSubmit }) => {
   );
 };
 
-export default FormCv;
+export default Formcv;
