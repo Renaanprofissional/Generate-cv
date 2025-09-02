@@ -128,6 +128,7 @@ const Formcv: React.FC<Props> = ({ onSubmit }) => {
           onChange={(e) => handleChange("nome", e.target.value)}
         />
         <Input
+          type="email"
           placeholder="Email"
           value={form.email}
           onChange={(e) => handleChange("email", e.target.value)}
@@ -136,6 +137,7 @@ const Formcv: React.FC<Props> = ({ onSubmit }) => {
 
       <div className="flex gap-3 mt-5">
         <Input
+          type="number"
           placeholder="Telefone"
           value={form.telefone}
           onChange={(e) => handleChange("telefone", e.target.value)}
