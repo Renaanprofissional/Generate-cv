@@ -15,7 +15,7 @@ const App: React.FC = () => {
           <CurriculoTemplate data={curriculoData} />
         ) : (
           <p className="text-gray-500 text-center">
-            Preencha o formulário para ver o template.
+            Preencha o formulário para ver o resultado.
           </p>
         )}
       </div>
