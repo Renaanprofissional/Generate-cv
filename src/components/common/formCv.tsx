@@ -57,15 +57,39 @@ const FormCv: React.FC<Props> = ({ onSubmit }) => {
     }
   };
 
-  const addField = (field: "projetos" | "habilidades" | "softskills" | "formacoes") => {
+  const addField = (
+    field: "projetos" | "habilidades" | "softskills" | "formacoes"
+  ) => {
     setForm({
       ...form,
       [field]: [...form[field], ""],
     });
   };
 
+  const isFormValid = () => {
+  // Verifica campos obrigatórios de texto
+  if (!form.nome.trim() || !form.email.trim() || !form.telefone.trim() || !form.cidade.trim() || !form.objetivos.trim()) {
+    return false;
+  }
+
+  // Verifica arrays obrigatórios
+  const checkArray = (arr: string[]) => arr.every(item => item.trim() !== "");
+  if (!checkArray(form.formacoes) || !checkArray(form.habilidades) || !checkArray(form.projetos) || !checkArray(form.softskills)) {
+    return false;
+  }
+
+  return true;
+};
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!isFormValid()) {
+      alert(
+        "Por favor, preencha todos os campos obrigatórios antes de gerar o currículo."
+      );
+      return;
+    }
     onSubmit(form);
   };
 
@@ -226,7 +250,7 @@ const FormCv: React.FC<Props> = ({ onSubmit }) => {
       </div>
 
       <div className="flex justify-center mt-5">
-        <Button type="submit" className="w-[250px]">
+        <Button type="submit" className="w-[250px]" disabled={!isFormValid()}>
           Gerar Currículo
         </Button>
       </div>
