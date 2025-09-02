@@ -1,7 +1,7 @@
 // gerarWordCv.ts
 import { Document, Packer, Paragraph, TextRun, HeadingLevel } from "docx";
 import { saveAs } from "file-saver";
-import type { CurriculoData } from "../components/common/FormCv"; // ajuste o caminho
+import type { CurriculoData } from "../components/common/formCv"; // ajuste o caminho
 
 export async function gerarWordCv(data: CurriculoData) {
   const children: Paragraph[] = [];
